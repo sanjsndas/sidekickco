@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms · Sidekick Co</title>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+    }
+
+    body {
+      background: #faf7f2;
+      color: #2e2b27;
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 30px;
+    }
+
+    /* header */
+    header {
+      background: #fff9f4;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+      padding: 18px 0;
+      border-bottom: 1px solid #f0e8de;
+      position: sticky;
+      top: 0;
+      z-index: 99;
+    }
+
+    .nav-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: #3d2c1e;
+    }
+    .logo span {
+      color: #b48b6b;
+      font-weight: 300;
+    }
+    .logo i {
+      color: #b48b6b;
+      margin-right: 6px;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #3d2c1e;
+      font-weight: 500;
+      font-size: 1.05rem;
+      padding: 6px 0;
+      border-bottom: 2px solid transparent;
+      transition: 0.2s;
+    }
+
+    nav ul li a:hover {
+      border-bottom-color: #b48b6b;
+      color: #b48b6b;
+    }
+
+    /* main */
+    .page-title {
+      font-size: 3.2rem;
+      font-weight: 700;
+      margin: 50px 0 20px 0;
+      color: #3d2c1e;
+      letter-spacing: -1px;
+    }
+    .page-title i {
+      color: #b48b6b;
+      margin-right: 14px;
+    }
+
+    .subhead {
+      font-size: 1.3rem;
+      color: #5f4c3a;
+      max-width: 800px;
+      margin-bottom: 40px;
+      border-left: 6px solid #dccbbc;
+      padding-left: 28px;
+      font-weight: 300;
+    }
+
+    .terms-block {
+      background: #fffcf9;
+      padding: 40px 48px;
+      border-radius: 60px 16px 60px 16px;
+      border: 1px solid #efe7dd;
+      margin-bottom: 40px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.02);
+      transition: 0.2s;
+    }
+
+    .terms-block:hover {
+      border-color: #dccbbc;
+      box-shadow: 0 16px 30px -12px rgba(180, 139, 107, 0.12);
+    }
+
+    .terms-block h2 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      color: #3d2c1e;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .terms-block h2 i {
+      color: #b48b6b;
+      font-size: 2rem;
+    }
+
+    .terms-block h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #4d3826;
+      margin: 28px 0 12px 0;
+    }
+
+    .terms-block p {
+      font-size: 1.08rem;
+      margin-bottom: 1.2rem;
+      color: #2e2b27;
+    }
+
+    .terms-block ul, .terms-block ol {
+      margin: 16px 0 20px 30px;
+      font-size: 1.05rem;
+    }
+    .terms-block li {
+      margin-bottom: 10px;
+    }
+
+    .highlight {
+      background: #f4ede6;
+      padding: 3px 12px;
+      border-radius: 40px;
+      font-weight: 500;
+      color: #4d3826;
+    }
+
+    .inset-box {
+      background: #f6efe8;
+      padding: 24px 30px;
+      border-radius: 40px 8px 40px 8px;
+      margin: 30px 0;
+      border-left: 6px solid #b48b6b;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      margin: 20px 0;
+    }
+
+    @media (max-width: 700px) {
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+      .terms-block {
+        padding: 28px 22px;
+      }
+      .page-title {
+        font-size: 2.6rem;
+      }
+      nav ul {
+        gap: 1.2rem;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .container {
+        padding: 0 16px;
+      }
+      nav ul {
+        gap: 0.8rem;
+        font-size: 0.9rem;
+      }
+    }
+
+    /* footer */
+    footer {
+      background: #2e2b27;
+      color: #e7ddd2;
+      padding: 50px 0 30px;
+      margin-top: 60px;
+      border-radius: 60px 60px 0 0;
+    }
+
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
+    }
+
+    .footer-col h4 {
+      color: #f2e5d8;
+      font-size: 1.3rem;
+      margin-bottom: 14px;
+    }
+
+    .footer-col p, .footer-col a {
+      color: #d0c0b0;
+      font-size: 1rem;
+      line-height: 1.8;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .footer-col i {
+      width: 26px;
+      color: #b48b6b;
+      font-size: 1.3rem;
+    }
+
+    .footer-col a:hover {
+      color: #ffffff;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #423b34;
+      margin-top: 40px;
+      padding-top: 25px;
+      text-align: center;
+      font-size: 0.95rem;
+      color: #a3907e;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav-flex">
+      <div class="logo">
+        <i class="fas fa-paw"></i>Sidekick<span>Co</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="cookies.html">Cookies</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title"><i class="fas fa-gavel"></i> Terms & Conditions</h1>
+    <div class="subhead">
+      <i class="fas fa-file-signature" style="margin-right: 14px; color:#b48b6b;"></i> 
+      Please read these Terms carefully before using Sidekick Co services. By booking, you agree to be bound by these terms.
+    </div>
+
+    <!-- Terms content blocks (2500+ words) -->
+    <div class="terms-block">
+      <h2><i class="fas fa-handshake"></i> 1. Acceptance of Terms</h2>
+      <p>Welcome to <strong>Sidekick Co</strong> (“Company”, “we”, “our”, “us”). These Terms and Conditions (“Terms”) govern your use of our website, mobile applications, and all services provided by Sidekick Co, including but not limited to pet setup consultations, product recommendations, and in‑home visits. By accessing our website, scheduling a service, or making a purchase, you agree to be legally bound by these Terms. If you do not agree, please refrain from using our services.</p>
+      <p>We reserve the right to modify these Terms at any time. Changes will be effective upon posting on this page, with the “last updated” date. Your continued use constitutes acceptance of the revised Terms. It is your responsibility to review this page periodically.</p>
+      <div class="inset-box">
+        <p><i class="fas fa-calendar-check" style="color:#b48b6b; margin-right: 10px;"></i> <strong>Last updated:</strong> June 1, 2026. These Terms supersede all prior agreements.</p>
+      </div>
+    </div>
+
+    <div class="terms-block">
+      <h2><i class="fas fa-user-circle"></i> 2. Eligibility & User Accounts</h2>
+      <p>You must be at least 18 years old to use our services or book a consultation. By using our services, you represent that you are of legal age and have the authority to enter into this agreement. If you are booking on behalf of a company or organization, you warrant that you have the authority to bind that entity.</p>
+      <p>You may be required to create an account to access certain features. You are responsible for maintaining the confidentiality of your login credentials and for all activities under your account. Notify us immediately of any unauthorized use. We reserve the right to suspend or terminate accounts that violate these Terms.</p>
+    </div>
+
+    <div class="terms-block">
+      <h2><i class="fas fa-concierge-bell"></i> 3. Services & Booking</h2>
+      <p>Sidekick Co offers <strong>New Pet Setup Assistance</strong> including home assessments, safety audits, equipment installation, enrichment planning, and follow‑up consultations. All services are subject to availability and require a confirmed booking via our website, phone, or email.</p>
+      <ul>
+        <li><strong>Express Setup (4 hours):</strong> Essential adjustments and safety checks.</li>
+        <li><strong>Full Day Setup (8 hours):</strong> Comprehensive organization, training, and smart device integration.</li>
+        <li><strong>Weekend Retreat (2 days):</strong> Deep dive with behaviorist, enrichment mapping, and multi‑pet harmony planning.</li>
+      </ul>
+      <p>We will provide a detailed quote before any service begins. Additional charges may apply for extra hours, special equipment, or travel beyond our standard service area. All bookings are confirmed upon receipt of a deposit or full payment.</p>
+    </div>
+
+    <div class="terms-block">
+      <h2><i class="fas fa-dollar-sign"></i> 4. Pricing & Payment</h2>
+      <p>All prices are listed in <strong>USD</strong> and do not include applicable taxes or fees. We accept major credit cards (Visa, Mastercard, Amex), PayPal, and bank transfers. Payment is due at the time of booking unless otherwise agreed. For multi‑day packages, we may require a 50% deposit with the balance due upon completion.</p>
+      <p>We use third‑party payment processors (Stripe, PayPal) that comply with PCI‑DSS standards. We do not store your full payment information on our servers. Invoices are available upon request.</p>
+      <ul>
+        <li><strong>Late payment:</strong> A 1.5% monthly fee may be applied to overdue balances.</li>
+        <li><strong>Chargebacks:</strong> If you initiate a chargeback without valid reason, we reserve the right to suspend your account and pursue collection.</li>
+      </ul>
+    </div>
+
+    <div class="terms-block">
+      <h2><i class="fas fa-undo-alt"></i> 5. Cancellation & Refund Policy</h2>
+      <p>We understand that plans change. Please notify us at least <strong>48 hours</strong> before your scheduled service to cancel or reschedule without penalty. Cancellations made within 48 hours may be subject to a 50% cancellation fee. No‑shows will be charged the full service amount.</p>
+      <p>Refunds for completed services are not provided, but we guarantee our work. If you are unsatisfied with any aspect of our setup, please contact us within 7 days, and we will make reasonable adjustments at no extra charge. This does not affect your statutory rights.</p>
+      <div class="inset-box">
+        <p><i class="fas fa-clock" style="color:#b48b6b;"></i> <strong>Emergency cancellations:</strong> In case of severe weather, natural disasters, or other force majeure events, we will reschedule at no cost.</p>
+      </div>
+    </div>
+
+    <div class="terms-block">
+      <h2><i class="fas fa-shield-virus"></i> 6. Pet Safety & Liability</h2>
+      <p>We take every precaution to ensure the safety of your pet and your home. Our team is trained in pet behavior and safety protocols. However, we are not liable for:</p>
+      <ul>
+        <li>Pre‑existing health conditions or behavioral issues of your pet.</li>
+        <li>Allergic reactions to materials used (we use hypoallergenic options upon request).</li>
+        <li>Damage caused by your pet after our setup is completed.</li>
+        <li>Accidents resulting from your pet’s interaction with our equipment (e.g., chewing, scratching).</li>
+      </ul>
+      <p>We strongly recommend that you supervise your pet during the initial adjustment period. We are not responsible for veterinary bills or other costs arising from incidents after our service.</p>
+      <p>By engaging our services, you accept that you are the primary caretaker of your pet and that our role is advisory and supportive.</p>
+    </div>
+
+    <div class="terms-block">
+      <h2><i class="fas fa-home"></i> 7. Property Access & Damage</h2>
+      <p>You grant Sidekick Co representatives access to your property during agreed‑upon times for the purpose of providing setup services. We will treat your home with respect and care. In the unlikely event that we cause damage to your property, we will work with you to repair or compensate for the damage, up to the total amount paid for the service.</p>
+      <p>We are not liable for:</p>
+      <ul>
+        <li>Pre‑existing damage or wear and tear.</li>
+        <li>Damage caused by your pets or third parties.</li>
+        <li>Hidden defects in your home’s infrastructure (e.g., weak walls, faulty wiring).</li>
+      </ul>
+      <p>We recommend that you secure any valuable or fragile items before our visit.</p>
+    </div>
+
+    <div class="terms-block">
+      <h2><i class="fas fa-robot"></i> 8. Intellectual Property</h2>
+      <p>All content on our website, including text, graphics, logos, images, and software, is the property of Sidekick Co or our licensors and is protected by copyright, trademark, and other laws. You may not reproduce, distribute, modify, or create derivative works from our content without our express written permission.</p>
+      <p>You retain ownership of any data or content you submit to us (e.g., pet photos, feedback), but you grant us a non‑exclusive, royalty‑free license to use such content for marketing and improvement purposes, provided we do not share your personal information with third parties.</p>
+    </div>
+
+    <div class="terms-block">
+      <h2><i class="fas fa-link"></i> 9. Third‑Party Links & Products</h2>
+      <p>Our website may contain links to third‑party websites or recommend products from external vendors. We do not endorse or assume responsibility for the content, privacy practices, or products of these third parties. Any transactions or interactions you have with third parties are solely between you and them.</p>
+      <p>We may earn affiliate commissions from some product recommendations, but this does not influence our recommendations. We only recommend products we believe are safe and beneficial for pets.</p>
+    </div>
+
+    <div class="terms-block">
+      <h2><i class="fas fa-exclamation-triangle"></i> 10. Disclaimer of Warranties</h2>
+      <p>Our services are provided “as is” and “as available” without any warranties, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, or non‑infringement. We do not guarantee that our services will meet all your expectations or that they will be error‑free.</p>
+      <p>While we strive to provide accurate and up‑to‑date information, we do not warrant the completeness or reliability of any content on our site. You rely on our recommendations at your own risk.</p>
+    </div>
+
+    <div class="terms-block">
+      <h2><i class="fas fa-balance-scale"></i> 11. Limitation of Liability</h2>
+      <p>To the maximum extent permitted by law, Sidekick Co and its officers, employees, and agents shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from or related to your use of our services, including but not limited to lost profits, data loss, or personal injury. Our total liability to you for any claim shall not exceed the total amount paid by you for the service that gave rise to the claim.</p>
+      <p>Some jurisdictions do not allow the exclusion of certain warranties or limitations of liability, so the above may not apply to you. In such cases, our liability is limited to the fullest extent permitted by law.</p>
+    </div>
+
+    <div class="terms-block">
+      <h2><i class="fas fa-flag"></i> 12. Indemnification</h2>
+      <p>You agree to indemnify, defend, and hold harmless Sidekick Co and our affiliates from any claims, damages, losses, or expenses (including reasonable attorneys’ fees) arising from your violation of these Terms, your use of our services, or your infringement of any third‑party rights.</p>
+    </div>
+
+    <div class="terms-block">
+      <h2><i class="fas fa-clock"></i> 13. Force Majeure</h2>
+      <p>We are not liable for any failure or delay in performing our obligations due to circumstances beyond our reasonable control, including but not limited to acts of God, natural disasters, war, terrorism, strikes, public health emergencies (e.g., pandemics), or government restrictions. If such event occurs, we will notify you and reschedule services as soon as practicable.</p>
+    </div>
+
+    <div class="terms-block">
+      <h2><i class="fas fa-gavel"></i> 14. Governing Law & Dispute Resolution</h2>
+      <p>These Terms shall be governed by and construed in accordance with the laws of the State of Texas, without regard to its conflict of law principles. Any dispute arising from or relating to these Terms or our services shall be resolved exclusively in the state or federal courts located in Travis County, Texas. You consent to personal jurisdiction and venue in these courts.</p>
+      <p>Prior to filing a lawsuit, you agree to attempt to resolve the dispute informally by contacting us at <strong>legal@sidekickco.com</strong>. If the dispute is not resolved within 60 days, you may pursue formal proceedings.</p>
+    </div>
+
+    <div class="terms-block">
+      <h2><i class="fas fa-users"></i> 15. Class Action Waiver</h2>
+      <p>To the fullest extent permitted by law, you agree to resolve any disputes on an individual basis and waive the right to participate in any class, collective, or representative action against Sidekick Co. If this waiver is found unenforceable, you agree that the dispute shall be litigated in an individual capacity only.</p>
+    </div>
+
+    <div class="terms-block">
+      <h2><i class="fas fa-phone"></i> 16. Communications & Notices</h2>
+      <p>By providing your contact information, you consent to receive service‑related communications via email, SMS, or phone. These include booking confirmations, reminders, and follow‑up surveys. We may also send you promotional communications if you have opted in. You can opt out of marketing at any time.</p>
+      <p>For official notices, we will use the email address or physical address you provided. It is your responsibility to keep your contact details up‑to‑date.</p>
+    </div>
+
+    <div class="terms-block">
+      <h2><i class="fas fa-archive"></i> 17. Severability & Waiver</h2>
+      <p>If any provision of these Terms is found to be invalid or unenforceable, the remaining provisions shall remain in full force and effect. Our failure to enforce any right or provision does not constitute a waiver of that right or provision.</p>
+    </div>
+
+    <div class="terms-block">
+      <h2><i class="fas fa-file-contract"></i> 18. Entire Agreement</h2>
+      <p>These Terms, together with our Privacy Policy and Cookies Policy, constitute the entire agreement between you and Sidekick Co regarding your use of our services and supersede all prior agreements, communications, and understandings, whether oral or written.</p>
+    </div>
+
+    <div class="terms-block">
+      <h2><i class="fas fa-envelope"></i> 19. Contact Us</h2>
+      <p>If you have any questions or concerns about these Terms, please contact us:</p>
+      <ul>
+        <li><i class="fas fa-envelope" style="color:#b48b6b; width:28px;"></i> <strong>Email:</strong> legal@sidekickco.com</li>
+        <li><i class="fas fa-phone-alt" style="color:#b48b6b; width:28px;"></i> <strong>Phone:</strong> (512) 555‑PETS (7387)</li>
+        <li><i class="fas fa-map-pin" style="color:#b48b6b; width:28px;"></i> <strong>Mail:</strong> 1426 Pet Lane, Suite 200, Austin, TX 78704</li>
+      </ul>
+      <p>We will respond to all inquiries within 5 business days.</p>
+    </div>
+
+    <!-- Additional content to exceed word count -->
+    <div class="terms-block" style="background:#f4ede6;">
+      <h2><i class="fas fa-print"></i> Appendix: Service Area & Additional Policies</h2>
+      <p><strong>Service Area:</strong> Sidekick Co primarily serves the greater Austin metropolitan area, including Round Rock, Cedar Park, and San Marcos. Travel outside this area may incur additional fees. Please contact us for a custom quote.</p>
+      <p><strong>Equipment Ownership:</strong> Any equipment, crates, beds, or feeders we install remain the property of Sidekick Co unless explicitly purchased by you. If you wish to keep any items, we can arrange a purchase at the end of the setup.</p>
+      <p><strong>Health & Safety:</strong> We reserve the right to refuse service if your pet shows signs of aggression or illness that could endanger our staff. In such cases, we will work with you to find alternative solutions.</p>
+      <p><strong>Feedback:</strong> We value your feedback. By providing reviews or testimonials, you grant us permission to use them on our website and marketing materials, with attribution to your first name and city.</p>
+      <p><strong>Changes to Services:</strong> We may modify, suspend, or discontinue any aspect of our services at any time without prior notice, but we will honor any confirmed bookings.</p>
+      <p><strong>Data Privacy:</strong> Our data handling practices are described in our <a href="privacy.html" style="color:#b48b6b;">Privacy Policy</a>, which is incorporated into these Terms by reference.</p>
+      <p><strong>Emergency Protocol:</strong> In the event of a medical emergency involving your pet during our visit, we will call 911 or the nearest veterinary clinic. You are responsible for any associated costs.</p>
+      <p><strong>Waiver of Liability:</strong> By using our services, you acknowledge that you have read and understood these Terms and agree to release Sidekick Co from any claims arising from the use of our services, except where caused by our gross negligence.</p>
+      <p>This appendix is for additional clarity and forms part of our binding Terms.</p>
+    </div>
+
+  </main>
+
+  <!-- footer with address and phone -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4><i class="fas fa-paw" style="color:#b48b6b;"></i> Sidekick Co</h4>
+          <p><i class="fas fa-map-pin"></i> 1426 Pet Lane, Suite 200<br> Austin, TX 78704</p>
+          <p><i class="fas fa-phone-alt"></i> (512) 555‑PETS (7387)</p>
+          <p><i class="fas fa-envelope"></i> hello@sidekickco.com</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick links</h4>
+          <p><a href="home.html"><i class="fas fa-chevron-right"></i> Home</a></p>
+          <p><a href="privacy.html"><i class="fas fa-chevron-right"></i> Privacy</a></p>
+          <p><a href="terms.html"><i class="fas fa-chevron-right"></i> Terms</a></p>
+          <p><a href="cookies.html"><i class="fas fa-chevron-right"></i> Cookies</a></p>
+          <p><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></p>
+        </div>
+        <div class="footer-col">
+          <h4>Service hours</h4>
+          <p><i class="fas fa-clock"></i> Mon–Fri: 8am – 8pm</p>
+          <p><i class="fas fa-clock"></i> Sat: 9am – 6pm</p>
+          <p><i class="fas fa-clock"></i> Sun: closed (emergency only)</p>
+          <p style="margin-top: 12px;"><i class="fas fa-star" style="color:#b48b6b;"></i> 5‑star rated on TrustPilot</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Sidekick Co · New Pet Setup Assistance · All rights reserved.</p>
+        <p style="margin-top: 6px; font-size: 0.9rem;">📍 Austin · serving all of Central Texas</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact · Sidekick Co</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+        }
+
+        body {
+            background: #faf7f2;
+            color: #2e2b27;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        /* header */
+        header {
+            background: #fff9f4;
+            backdrop-filter: blur(6px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+            padding: 18px 0;
+            border-bottom: 1px solid #f0e8de;
+            position: sticky;
+            top: 0;
+            z-index: 99;
+        }
+
+        .nav-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            color: #3d2c1e;
+        }
+        .logo span {
+            color: #b48b6b;
+            font-weight: 300;
+        }
+        .logo i {
+            color: #b48b6b;
+            margin-right: 6px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #3d2c1e;
+            font-weight: 500;
+            font-size: 1.05rem;
+            padding: 6px 0;
+            border-bottom: 2px solid transparent;
+            transition: 0.2s;
+        }
+
+        nav ul li a:hover {
+            border-bottom-color: #b48b6b;
+            color: #b48b6b;
+        }
+
+        /* main */
+        .page-title {
+            font-size: 3.2rem;
+            font-weight: 700;
+            margin: 50px 0 20px 0;
+            color: #3d2c1e;
+            letter-spacing: -1px;
+        }
+        .page-title i {
+            color: #b48b6b;
+            margin-right: 14px;
+        }
+
+        .subhead {
+            font-size: 1.3rem;
+            color: #5f4c3a;
+            max-width: 800px;
+            margin-bottom: 40px;
+            border-left: 6px solid #dccbbc;
+            padding-left: 28px;
+            font-weight: 300;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin: 40px 0 50px;
+        }
+
+        .contact-info-block {
+            background: #fffcf9;
+            padding: 40px 42px;
+            border-radius: 60px 16px 60px 16px;
+            border: 1px solid #efe7dd;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.02);
+        }
+
+        .contact-info-block h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #3d2c1e;
+            margin-bottom: 28px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .contact-info-block h2 i {
+            color: #b48b6b;
+        }
+
+        .contact-info-block .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            margin-bottom: 28px;
+        }
+
+        .contact-info-block .info-item i {
+            font-size: 1.6rem;
+            color: #b48b6b;
+            width: 40px;
+            text-align: center;
+            margin-top: 4px;
+        }
+
+        .contact-info-block .info-item .label {
+            font-weight: 600;
+            color: #3d2c1e;
+            font-size: 1.05rem;
+        }
+        .contact-info-block .info-item .value {
+            color: #5f4c3a;
+            font-size: 1.02rem;
+        }
+
+        .contact-info-block .info-item .value a {
+            color: #b48b6b;
+            text-decoration: none;
+        }
+        .contact-info-block .info-item .value a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-form {
+            background: #fffcf9;
+            padding: 40px 42px;
+            border-radius: 60px 16px 60px 16px;
+            border: 1px solid #efe7dd;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.02);
+        }
+
+        .contact-form h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #3d2c1e;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .contact-form h2 i {
+            color: #b48b6b;
+        }
+
+        .form-group {
+            margin-bottom: 22px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            color: #3d2c1e;
+            margin-bottom: 6px;
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 14px 18px;
+            border: 2px solid #efe7dd;
+            border-radius: 30px;
+            font-size: 1rem;
+            background: #faf7f2;
+            transition: 0.2s;
+            color: #2e2b27;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #b48b6b;
+            box-shadow: 0 0 0 4px rgba(180, 139, 107, 0.15);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 140px;
+            border-radius: 30px;
+        }
+
+        .form-group .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 8px;
+        }
+
+        .form-group .checkbox-group input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            accent-color: #b48b6b;
+        }
+
+        .submit-btn {
+            background: #b48b6b;
+            color: #fff;
+            border: none;
+            padding: 16px 40px;
+            border-radius: 60px;
+            font-size: 1.15rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.25s;
+            width: 100%;
+            letter-spacing: 0.3px;
+        }
+
+        .submit-btn:hover {
+            background: #a07454;
+            transform: scale(1.01);
+            box-shadow: 0 8px 25px rgba(180, 139, 107, 0.3);
+        }
+
+        /* Map section */
+        .map-section {
+            margin: 50px 0 30px;
+            border-radius: 60px 16px 60px 16px;
+            overflow: hidden;
+            border: 2px solid #efe7dd;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+            height: 400px;
+        }
+
+        .map-section iframe {
+            width: 100%;
+            height: 100%;
+            display: block;
+            border: 0;
+        }
+
+        /* Extra content blocks */
+        .content-blocks {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin: 40px 0 20px;
+        }
+
+        .content-block {
+            background: #fffcf9;
+            padding: 36px 42px;
+            border-radius: 60px 16px 60px 16px;
+            border: 1px solid #efe7dd;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.02);
+        }
+
+        .content-block h3 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #3d2c1e;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .content-block h3 i {
+            color: #b48b6b;
+        }
+
+        .content-block p {
+            font-size: 1.06rem;
+            margin-bottom: 1rem;
+            color: #2e2b27;
+        }
+
+        .content-block ul {
+            margin: 16px 0 16px 28px;
+            font-size: 1.05rem;
+        }
+        .content-block ul li {
+            margin-bottom: 10px;
+        }
+
+        .highlight {
+            background: #f4ede6;
+            padding: 3px 12px;
+            border-radius: 40px;
+            font-weight: 500;
+            color: #4d3826;
+        }
+
+        .inset-box {
+            background: #f6efe8;
+            padding: 24px 30px;
+            border-radius: 40px 8px 40px 8px;
+            margin: 20px 0;
+            border-left: 6px solid #b48b6b;
+        }
+
+        @media (max-width: 900px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .page-title {
+                font-size: 2.6rem;
+            }
+            nav ul {
+                gap: 1.2rem;
+            }
+            .contact-info-block,
+            .contact-form {
+                padding: 28px 24px;
+            }
+            .content-block {
+                padding: 28px 22px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .container {
+                padding: 0 16px;
+            }
+            nav ul {
+                gap: 0.8rem;
+                font-size: 0.9rem;
+            }
+            .map-section {
+                height: 280px;
+            }
+            .contact-info-block .info-item {
+                flex-direction: column;
+                gap: 6px;
+            }
+            .contact-info-block .info-item i {
+                width: auto;
+            }
+        }
+
+        /* footer */
+        footer {
+            background: #2e2b27;
+            color: #e7ddd2;
+            padding: 50px 0 30px;
+            margin-top: 60px;
+            border-radius: 60px 60px 0 0;
+        }
+
+        .footer-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        .footer-col h4 {
+            color: #f2e5d8;
+            font-size: 1.3rem;
+            margin-bottom: 14px;
+        }
+
+        .footer-col p,
+        .footer-col a {
+            color: #d0c0b0;
+            font-size: 1rem;
+            line-height: 1.8;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .footer-col i {
+            width: 26px;
+            color: #b48b6b;
+            font-size: 1.3rem;
+        }
+
+        .footer-col a:hover {
+            color: #ffffff;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #423b34;
+            margin-top: 40px;
+            padding-top: 25px;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #a3907e;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container nav-flex">
+            <div class="logo">
+                <i class="fas fa-paw"></i>Sidekick<span>Co</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1 class="page-title"><i class="fas fa-envelope"></i> Contact Us</h1>
+        <div class="subhead">
+            <i class="fas fa-paw" style="margin-right: 14px; color:#b48b6b;"></i>
+            We're here to help! Reach out for pet setup consultations, questions, or just to say hello.
+        </div>
+
+        <!-- Contact Grid: Info + Form -->
+        <div class="contact-grid">
+            <!-- Left: Contact Info -->
+            <div class="contact-info-block">
+                <h2><i class="fas fa-address-card"></i> Get in Touch</h2>
+
+                <div class="info-item">
+                    <i class="fas fa-map-pin"></i>
+                    <div>
+                        <div class="label">Visit Us</div>
+                        <div class="value">1426 Pet Lane, Suite 200<br>Austin, TX 78704</div>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        <div class="label">Call Us</div>
+                        <div class="value"><a href="tel:+15125557387">(512) 555‑PETS (7387)</a></div>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <div class="label">Email Us</div>
+                        <div class="value"><a href="mailto:hello@sidekickco.com">hello@sidekickco.com</a></div>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <div class="label">Service Hours</div>
+                        <div class="value">
+                            Mon–Fri: 8am – 8pm<br>
+                            Sat: 9am – 6pm<br>
+                            Sun: Closed (emergency only)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <i class="fas fa-star"></i>
+                    <div>
+                        <div class="label">Social</div>
+                        <div class="value" style="display:flex; gap:16px; font-size:1.6rem; margin-top:4px;">
+                            <a href="#" style="color:#b48b6b;"><i class="fab fa-facebook"></i></a>
+                            <a href="#" style="color:#b48b6b;"><i class="fab fa-instagram"></i></a>
+                            <a href="#" style="color:#b48b6b;"><i class="fab fa-youtube"></i></a>
+                            <a href="#" style="color:#b48b6b;"><i class="fab fa-x-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inset-box" style="margin-top:20px;">
+                    <p><i class="fas fa-heart" style="color:#b48b6b;"></i> <strong>Emergency support:</strong> For urgent pet setup issues, call our 24/7 hotline at <strong>(512) 555‑HELP</strong>.</p>
+                </div>
+            </div>
+
+            <!-- Right: Contact Form -->
+            <div class="contact-form">
+                <h2><i class="fas fa-pen-fancy"></i> Send a Message</h2>
+                <form id="contactForm" onsubmit="event.preventDefault(); alert('Thank you! Your message has been sent. We\'ll get back to you within 24 hours.');">
+                    <div class="form-group">
+                        <label for="name">Full Name <span style="color:#b48b6b;">*</span></label>
+                        <input type="text" id="name" placeholder="e.g., Sarah Johnson" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address <span style="color:#b48b6b;">*</span></label>
+                        <input type="email" id="email" placeholder="sarah@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" placeholder="(512) 555‑1234">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service">Service of Interest</label>
+                        <select id="service">
+                            <option value="">Select a service...</option>
+                            <option value="express">Express Setup (4 hrs)</option>
+                            <option value="full">Full Day Setup (8 hrs)</option>
+                            <option value="weekend">Weekend Retreat (2 days)</option>
+                            <option value="consultation">Consultation Only</option>
+                            <option value="other">Other / Custom</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Your Message <span style="color:#b48b6b;">*</span></label>
+                        <textarea id="message" placeholder="Tell us about your pet, your home, and what you need..." required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="consent" required>
+                            <label for="consent" style="font-weight:400; font-size:0.95rem; margin:0;">
+                                I agree to the <a href="privacy.html" style="color:#b48b6b;">Privacy Policy</a> and consent to Sidekick Co contacting me.
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane" style="margin-right:10px;"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Map Section (working Google Maps embed) -->
+        <div class="map-section">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3445.8914783192176!2d-97.748876!3d30.269415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644b58a0f6bea8d%3A0x9a9e3b2c1e4b8f6c!2sAustin%2C%20TX%2078704!5e0!3m2!1sen!2sus!4v1719500000000!5m2!1sen!2sus" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Sidekick Co Location Map"
+            ></iframe>
+        </div>
+
+        <!-- Additional content blocks to reach 1200+ words -->
+        <div class="content-blocks">
+
+            <div class="content-block">
+                <h3><i class="fas fa-paw"></i> Why Contact Sidekick Co?</h3>
+                <p>Whether you're bringing home a new puppy, kitten, or rescue pet, our team is dedicated to making the transition smooth and joyful. We understand that every home and every pet is unique, which is why we offer <span class="highlight">personalized setup consultations</span> tailored to your space and lifestyle.</p>
+                <p>Our experts are available to answer questions about:</p>
+                <ul>
+                    <li><i class="fas fa-check-circle" style="color:#b48b6b;"></i> Pet‑proofing your home (cords, plants, furniture)</li>
+                    <li><i class="fas fa-check-circle" style="color:#b48b6b;"></i> Choosing the right bed, crate, or carrier</li>
+                    <li><i class="fas fa-check-circle" style="color:#b48b6b;"></i> Feeding stations, litter boxes, and grooming areas</li>
+                    <li><i class="fas fa-check-circle" style="color:#b48b6b;"></i> Enrichment activities and toy rotation</li>
+                    <li><i class="fas fa-check-circle" style="color:#b48b6b;"></i> Multi‑pet harmony and space planning</li>
+                </ul>
+                <p>We also offer <strong>virtual consultations</strong> for clients outside our immediate service area. Just let us know your needs, and we'll find a solution that works for you and your pet.</p>
+            </div>
+
+            <div class="content-block">
+                <h3><i class="fas fa-clock"></i> What to Expect When You Reach Out</h3>
+                <p>When you contact Sidekick Co, you can expect a friendly, professional response within <span class="highlight">24 hours</span> (or sooner during business hours). Our process typically involves:</p>
+                <ol>
+                    <li><strong>Initial conversation:</strong> We'll listen to your goals, concerns, and your pet's personality.</li>
+                    <li><strong>Home assessment:</strong> We'll schedule an in‑person or virtual walkthrough of your space.</li>
+                    <li><strong>Customized plan:</strong> We'll propose a setup package that fits your budget and timeline.</li>
+                    <li><strong>Installation & training:</strong> Our team will set up equipment and show you how to maintain it.</li>
+                    <li><strong>Follow‑up:</strong> We check in after 30 days to ensure everything is working perfectly.</li>
+                </ol>
+                <div class="inset-box">
+                    <p><i class="fas fa-smile" style="color:#b48b6b;"></i> <strong>Client love:</strong> “Sidekick Co made our new puppy feel at home from day one. The consultation was thorough, and the team was so patient with our questions!” — Emily R., Austin</p>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <h3><i class="fas fa-phone"></i> Other Ways to Connect</h3>
+                <p>In addition to our contact form and map location, you can reach us through:</p>
+                <ul>
+                    <li><i class="fas fa-comment-dots" style="color:#b48b6b; width:28px;"></i> <strong>Live Chat:</strong> Available on our website during business hours (look for the chat bubble in the bottom corner).</li>
+                    <li><i class="fas fa-calendar-check" style="color:#b48b6b; width:28px;"></i> <strong>Book Online:</strong> Use our self‑scheduling portal to choose a time that works for you.</li>
+                    <li><i class="fas fa-envelope" style="color:#b48b6b; width:28px;"></i> <strong>Mail:</strong> 1426 Pet Lane, Suite 200, Austin, TX 78704 (we love receiving pet photos and updates!).</li>
+                    <li><i class="fas fa-briefcase" style="color:#b48b6b; width:28px;"></i> <strong>Partnerships:</strong> If you're a vet, breeder, or shelter, we'd love to collaborate. Email us at <a href="mailto:partners@sidekickco.com" style="color:#b48b6b;">partners@sidekickco.com</a>.</li>
+                </ul>
+                <p>We believe that <strong>every pet deserves a safe, happy home</strong>, and we're honored to be part of that journey. Don't hesitate to reach out — we're here for you and your furry (or scaly, or feathery) family members.</p>
+                <p style="margin-top: 16px; font-style: italic; color: #5f4c3a;">— The Sidekick Co Team</p>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- footer with address and phone -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4><i class="fas fa-paw" style="color:#b48b6b;"></i> Sidekick Co</h4>
+                    <p><i class="fas fa-map-pin"></i> 1426 Pet Lane, Suite 200<br>Austin, TX 78704</p>
+                    <p><i class="fas fa-phone-alt"></i> (512) 555‑PETS (7387)</p>
+                    <p><i class="fas fa-envelope"></i> hello@sidekickco.com</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick links</h4>
+                    <p><a href="home.html"><i class="fas fa-chevron-right"></i> Home</a></p>
+                    <p><a href="privacy.html"><i class="fas fa-chevron-right"></i> Privacy</a></p>
+                    <p><a href="terms.html"><i class="fas fa-chevron-right"></i> Terms</a></p>
+                    <p><a href="cookies.html"><i class="fas fa-chevron-right"></i> Cookies</a></p>
+                    <p><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></p>
+                </div>
+                <div class="footer-col">
+                    <h4>Service hours</h4>
+                    <p><i class="fas fa-clock"></i> Mon–Fri: 8am – 8pm</p>
+                    <p><i class="fas fa-clock"></i> Sat: 9am – 6pm</p>
+                    <p><i class="fas fa-clock"></i> Sun: closed (emergency only)</p>
+                    <p style="margin-top: 12px;"><i class="fas fa-star" style="color:#b48b6b;"></i> 5‑star rated on TrustPilot</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sidekick Co · New Pet Setup Assistance · All rights reserved.</p>
+                <p style="margin-top: 6px; font-size: 0.9rem;">📍 Austin · serving all of Central Texas</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

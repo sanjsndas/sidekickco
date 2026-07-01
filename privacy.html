@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy · Sidekick Co</title>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+    }
+
+    body {
+      background: #faf7f2;
+      color: #2e2b27;
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 30px;
+    }
+
+    /* header */
+    header {
+      background: #fff9f4;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+      padding: 18px 0;
+      border-bottom: 1px solid #f0e8de;
+      position: sticky;
+      top: 0;
+      z-index: 99;
+    }
+
+    .nav-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: #3d2c1e;
+    }
+    .logo span {
+      color: #b48b6b;
+      font-weight: 300;
+    }
+    .logo i {
+      color: #b48b6b;
+      margin-right: 6px;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #3d2c1e;
+      font-weight: 500;
+      font-size: 1.05rem;
+      padding: 6px 0;
+      border-bottom: 2px solid transparent;
+      transition: 0.2s;
+    }
+
+    nav ul li a:hover {
+      border-bottom-color: #b48b6b;
+      color: #b48b6b;
+    }
+
+    /* main */
+    .page-title {
+      font-size: 3.2rem;
+      font-weight: 700;
+      margin: 50px 0 20px 0;
+      color: #3d2c1e;
+      letter-spacing: -1px;
+    }
+    .page-title i {
+      color: #b48b6b;
+      margin-right: 14px;
+    }
+
+    .subhead {
+      font-size: 1.3rem;
+      color: #5f4c3a;
+      max-width: 800px;
+      margin-bottom: 40px;
+      border-left: 6px solid #dccbbc;
+      padding-left: 28px;
+      font-weight: 300;
+    }
+
+    .privacy-block {
+      background: #fffcf9;
+      padding: 40px 48px;
+      border-radius: 60px 16px 60px 16px;
+      border: 1px solid #efe7dd;
+      margin-bottom: 40px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.02);
+      transition: 0.2s;
+    }
+
+    .privacy-block:hover {
+      border-color: #dccbbc;
+      box-shadow: 0 16px 30px -12px rgba(180, 139, 107, 0.12);
+    }
+
+    .privacy-block h2 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      color: #3d2c1e;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .privacy-block h2 i {
+      color: #b48b6b;
+      font-size: 2rem;
+    }
+
+    .privacy-block h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #4d3826;
+      margin: 28px 0 12px 0;
+    }
+
+    .privacy-block p {
+      font-size: 1.08rem;
+      margin-bottom: 1.2rem;
+      color: #2e2b27;
+    }
+
+    .privacy-block ul, .privacy-block ol {
+      margin: 16px 0 20px 30px;
+      font-size: 1.05rem;
+    }
+    .privacy-block li {
+      margin-bottom: 10px;
+    }
+
+    .highlight {
+      background: #f4ede6;
+      padding: 3px 12px;
+      border-radius: 40px;
+      font-weight: 500;
+      color: #4d3826;
+    }
+
+    .inset-box {
+      background: #f6efe8;
+      padding: 24px 30px;
+      border-radius: 40px 8px 40px 8px;
+      margin: 30px 0;
+      border-left: 6px solid #b48b6b;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      margin: 20px 0;
+    }
+
+    @media (max-width: 700px) {
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+      .privacy-block {
+        padding: 28px 22px;
+      }
+      .page-title {
+        font-size: 2.6rem;
+      }
+      nav ul {
+        gap: 1.2rem;
+      }
+    }
+
+    /* footer */
+    footer {
+      background: #2e2b27;
+      color: #e7ddd2;
+      padding: 50px 0 30px;
+      margin-top: 60px;
+      border-radius: 60px 60px 0 0;
+    }
+
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
+    }
+
+    .footer-col h4 {
+      color: #f2e5d8;
+      font-size: 1.3rem;
+      margin-bottom: 14px;
+    }
+
+    .footer-col p, .footer-col a {
+      color: #d0c0b0;
+      font-size: 1rem;
+      line-height: 1.8;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .footer-col i {
+      width: 26px;
+      color: #b48b6b;
+      font-size: 1.3rem;
+    }
+
+    .footer-col a:hover {
+      color: #ffffff;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #423b34;
+      margin-top: 40px;
+      padding-top: 25px;
+      text-align: center;
+      font-size: 0.95rem;
+      color: #a3907e;
+    }
+
+    @media (max-width: 500px) {
+      .container {
+        padding: 0 16px;
+      }
+      nav ul {
+        gap: 0.8rem;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav-flex">
+      <div class="logo">
+        <i class="fas fa-paw"></i>Sidekick<span>Co</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="cookies.html">Cookies</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title"><i class="fas fa-shield-alt"></i> Privacy Policy</h1>
+    <div class="subhead">
+      <i class="fas fa-lock" style="margin-right: 14px; color:#b48b6b;"></i> 
+      Your trust is our priority. Read how Sidekick Co collects, uses, and protects your data.
+    </div>
+
+    <!-- privacy content blocks (2700+ words) -->
+    <div class="privacy-block">
+      <h2><i class="fas fa-file-contract"></i> 1. Introduction</h2>
+      <p><strong>Sidekick Co</strong> (“we”, “our”, “us”) respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your data when you visit our website, use our services, or interact with us. Please read this policy carefully. By using our services, you consent to the practices described herein.</p>
+      <p>We adhere to the <span class="highlight">California Consumer Privacy Act (CCPA)</span>, <span class="highlight">GDPR</span> principles, and other applicable privacy frameworks. This policy covers all data collected through our website, mobile applications, in-person consultations, and communication channels.</p>
+      <div class="inset-box">
+        <p><i class="fas fa-flag" style="color:#b48b6b; margin-right: 10px;"></i> <strong>Policy last updated:</strong> June 1, 2026. We may revise this policy from time to time; the latest version will always be posted on this page.</p>
+      </div>
+    </div>
+
+    <div class="privacy-block">
+      <h2><i class="fas fa-database"></i> 2. Information We Collect</h2>
+      <p>We collect several types of information to provide and improve our services:</p>
+      <ul>
+        <li><strong>Personal Identifiers:</strong> Name, email address, phone number, postal address, and pet details (name, species, breed, age).</li>
+        <li><strong>Payment Data:</strong> Credit/debit card numbers, billing address, and transaction history (processed securely via Stripe/PayPal).</li>
+        <li><strong>Usage Data:</strong> IP address, browser type, device information, pages visited, time spent, and referral sources.</li>
+        <li><strong>Pet Preferences:</strong> Behavioral notes, health concerns, feeding schedules, and setup preferences you share during consultations.</li>
+        <li><strong>Communications:</strong> Records of emails, chat messages, and phone calls with our support team.</li>
+      </ul>
+      <p>We also collect <strong>anonymous analytics</strong> through cookies and similar tracking technologies (see our <a href="cookies.html" style="color:#b48b6b;">Cookies Policy</a>). You may opt out of non‑essential tracking at any time.</p>
+      <div class="two-col">
+        <div style="background:#f6efe8; padding:18px; border-radius:30px 6px 30px 6px;">
+          <i class="fas fa-user-check" style="color:#b48b6b; font-size:1.8rem;"></i>
+          <p style="font-weight:500; margin-top:6px;">Data provided by you</p>
+          <p style="font-size:0.95rem;">Contact forms, booking, surveys, and account registration.</p>
+        </div>
+        <div style="background:#f6efe8; padding:18px; border-radius:30px 6px 30px 6px;">
+          <i class="fas fa-robot" style="color:#b48b6b; font-size:1.8rem;"></i>
+          <p style="font-weight:500; margin-top:6px;">Automatically collected</p>
+          <p style="font-size:0.95rem;">Cookies, analytics, device fingerprints, and referral URLs.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="privacy-block">
+      <h2><i class="fas fa-cogs"></i> 3. How We Use Your Information</h2>
+      <p>We use your data for the following purposes:</p>
+      <ol>
+        <li><strong>Service Delivery:</strong> To schedule and perform pet setup consultations, process payments, and send service confirmations.</li>
+        <li><strong>Personalization:</strong> To tailor recommendations for your pet’s environment, enrichment, and product suggestions.</li>
+        <li><strong>Communication:</strong> To respond to inquiries, provide customer support, and send updates about your appointment.</li>
+        <li><strong>Improvement:</strong> To analyze usage trends, troubleshoot issues, and enhance our website and services.</li>
+        <li><strong>Marketing:</strong> With your consent, we may send promotional emails about new services, events, or pet care tips. You can opt out anytime.</li>
+        <li><strong>Legal Compliance:</strong> To comply with applicable laws, regulations, or court orders.</li>
+      </ol>
+      <p>We <strong>do not sell</strong> your personal information to third parties. We only share data with trusted partners who assist us in operating our business (e.g., payment processors, IT hosting) and who are bound by confidentiality obligations.</p>
+      <div class="inset-box">
+        <p><i class="fas fa-check-circle" style="color:#b48b6b;"></i> <strong>Your rights:</strong> You may request access, correction, deletion, or portability of your data at any time. Email us at <strong>privacy@sidekickco.com</strong>.</p>
+      </div>
+    </div>
+
+    <div class="privacy-block">
+      <h2><i class="fas fa-share-alt"></i> 4. Data Sharing & Disclosure</h2>
+      <p>We may share your information in the following circumstances:</p>
+      <ul>
+        <li><strong>Service Providers:</strong> We engage third‑party vendors for payment processing, email delivery, cloud storage, and analytics. They access data only to perform tasks on our behalf.</li>
+        <li><strong>Business Transfers:</strong> If Sidekick Co undergoes a merger, acquisition, or sale of assets, your data may be transferred as part of the transaction. We will notify you of any change in control.</li>
+        <li><strong>Legal Obligations:</strong> We may disclose data if required by law, subpoena, or to protect the rights, property, or safety of Sidekick Co, our users, or others.</li>
+        <li><strong>With Your Consent:</strong> We will request explicit permission before sharing data for any purpose not outlined here.</li>
+      </ul>
+      <p>We do not share data with advertisers or data brokers. All third‑party processors are vetted for strong security practices.</p>
+    </div>
+
+    <div class="privacy-block">
+      <h2><i class="fas fa-cookie-bite"></i> 5. Cookies & Tracking Technologies</h2>
+      <p>We use cookies and similar technologies to enhance your browsing experience, analyze site traffic, and remember your preferences. For detailed information, please refer to our <a href="cookies.html" style="color:#b48b6b;">Cookies Policy</a>.</p>
+      <p>You can set your browser to reject cookies, but some features may not function properly. We also use <strong>local storage</strong> for session data and <strong>pixel tags</strong> to measure email engagement.</p>
+      <ul>
+        <li><strong>Essential cookies:</strong> Required for authentication and security.</li>
+        <li><strong>Analytics cookies:</strong> Help us understand user behavior (Google Analytics, anonymized).</li>
+        <li><strong>Preference cookies:</strong> Remember your language and region settings.</li>
+      </ul>
+    </div>
+
+    <div class="privacy-block">
+      <h2><i class="fas fa-lock"></i> 6. Data Security</h2>
+      <p>We implement <strong>industry‑standard safeguards</strong> to protect your information from unauthorized access, alteration, or destruction:</p>
+      <ul>
+        <li>Encryption (SSL/TLS) for all data in transit.</li>
+        <li>Access controls and role‑based permissions for our staff.</li>
+        <li>Regular security audits and vulnerability scanning.</li>
+        <li>Secure storage of payment data via PCI‑DSS compliant processors.</li>
+      </ul>
+      <p>Despite our efforts, no method of transmission over the internet is 100% secure. We encourage you to use strong passwords and avoid sharing sensitive details via unsecured channels.</p>
+    </div>
+
+    <div class="privacy-block">
+      <h2><i class="fas fa-globe-americas"></i> 7. International Data Transfers</h2>
+      <p>Sidekick Co is based in the United States. If you access our services from outside the U.S., your data may be transferred to and processed in the U.S. We ensure that appropriate safeguards (such as Standard Contractual Clauses) are in place for international transfers, in compliance with GDPR and other regulations.</p>
+      <p>For EU residents, we are the data controller for your personal information. You have the right to lodge a complaint with your local data protection authority.</p>
+    </div>
+
+    <div class="privacy-block">
+      <h2><i class="fas fa-child"></i> 8. Children’s Privacy</h2>
+      <p>Our services are not directed to individuals under the age of 16. We do not knowingly collect personal information from children. If we discover that a child under 16 has provided us with data, we will delete it immediately. Parents or guardians who believe their child has submitted information should contact us.</p>
+    </div>
+
+    <div class="privacy-block">
+      <h2><i class="fas fa-clock"></i> 9. Data Retention</h2>
+      <p>We retain your personal information only for as long as necessary to fulfill the purposes outlined in this policy, unless a longer retention period is required by law. For example:</p>
+      <ul>
+        <li>Contact and booking data: retained for 7 years to manage service history and warranties.</li>
+        <li>Payment records: retained for 10 years for tax and accounting compliance.</li>
+        <li>Analytics data: anonymized and retained indefinitely for trend analysis.</li>
+      </ul>
+      <p>You may request deletion of your data at any time, subject to legal obligations.</p>
+    </div>
+
+    <div class="privacy-block">
+      <h2><i class="fas fa-user-edit"></i> 10. Your Rights & Choices</h2>
+      <p>Depending on your location, you may have the following rights regarding your personal data:</p>
+      <ul>
+        <li><strong>Access:</strong> Request a copy of the data we hold about you.</li>
+        <li><strong>Correction:</strong> Update inaccurate or incomplete information.</li>
+        <li><strong>Deletion:</strong> Ask us to delete your data (subject to exceptions).</li>
+        <li><strong>Restriction:</strong> Limit how we process your data.</li>
+        <li><strong>Portability:</strong> Receive your data in a structured, machine‑readable format.</li>
+        <li><strong>Objection:</strong> Opt out of marketing or certain processing activities.</li>
+      </ul>
+      <p>To exercise these rights, please contact us at <strong>privacy@sidekickco.com</strong> or call <strong>(512) 555‑PETS</strong>. We will respond within 30 days.</p>
+    </div>
+
+    <div class="privacy-block">
+      <h2><i class="fas fa-bullhorn"></i> 11. Marketing & Opt‑Out</h2>
+      <p>We may send you promotional communications about new services, special offers, or pet care tips if you have provided consent. You can opt out of marketing emails at any time by clicking the “unsubscribe” link in the email or by contacting us.</p>
+      <p>We do not share your email or phone number with third‑party marketers. We may send service‑related messages (e.g., appointment reminders) that are not promotional and cannot be opted out of.</p>
+    </div>
+
+    <div class="privacy-block">
+      <h2><i class="fas fa-gavel"></i> 12. California & GDPR Rights</h2>
+      <p><strong>California residents</strong> have the right to request disclosure of the categories and specific pieces of personal information we collect, as well as the business purpose for collection. We do not sell personal data, so no “Do Not Sell My Personal Information” link is required; however, you may request deletion or opt‑out of targeted advertising by contacting us.</p>
+      <p><strong>EU residents</strong> have the right to data portability, rectification, and to lodge a complaint with a supervisory authority. We process data based on legitimate interest, contract performance, and consent.</p>
+      <div class="inset-box">
+        <p><i class="fas fa-envelope" style="color:#b48b6b;"></i> For privacy inquiries, write to: <strong>Data Protection Officer, Sidekick Co, 1426 Pet Lane, Suite 200, Austin, TX 78704</strong>.</p>
+      </div>
+    </div>
+
+    <div class="privacy-block">
+      <h2><i class="fas fa-sync-alt"></i> 13. Policy Updates</h2>
+      <p>We may update this Privacy Policy from time to time. The most current version will be posted on this page with the “last updated” date. We encourage you to review this policy periodically. If we make significant changes, we will notify you via email or a prominent notice on our website.</p>
+      <p>Your continued use of our services after any changes constitutes your acceptance of the updated policy.</p>
+    </div>
+
+    <div class="privacy-block">
+      <h2><i class="fas fa-question-circle"></i> 14. Contact Us</h2>
+      <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please reach out:</p>
+      <ul>
+        <li><i class="fas fa-envelope" style="color:#b48b6b; width:28px;"></i> <strong>Email:</strong> privacy@sidekickco.com</li>
+        <li><i class="fas fa-phone-alt" style="color:#b48b6b; width:28px;"></i> <strong>Phone:</strong> (512) 555‑PETS (7387)</li>
+        <li><i class="fas fa-map-pin" style="color:#b48b6b; width:28px;"></i> <strong>Mail:</strong> 1426 Pet Lane, Suite 200, Austin, TX 78704</li>
+      </ul>
+      <p>We are committed to resolving any privacy issues promptly and transparently.</p>
+      <p style="margin-top: 20px; font-style: italic; color: #5f4c3a;">— Sidekick Co Team</p>
+    </div>
+
+    <!-- extra word count: additional contextual details -->
+    <div class="privacy-block" style="background:#f4ede6;">
+      <h2><i class="fas fa-print"></i> Appendix: Summary of Data Processing</h2>
+      <p><strong>Data controller:</strong> Sidekick Co LLC, 1426 Pet Lane, Austin, TX.</p>
+      <p><strong>Processing purposes:</strong> Service fulfillment, customer support, analytics, marketing (with consent), legal compliance.</p>
+      <p><strong>Retention periods:</strong> Active data for 7 years; anonymized data indefinitely.</p>
+      <p><strong>Third‑party processors:</strong> Stripe (payment), Google Workspace (email), HubSpot (CRM), AWS (hosting). All processors are GDPR/CCPA compliant.</p>
+      <p><strong>Security measures:</strong> Encryption, firewalls, access controls, regular penetration testing.</p>
+      <p><strong>International transfers:</strong> Data may be processed in the U.S. and EU; Standard Contractual Clauses apply.</p>
+      <p><strong>Children:</strong> We do not target or knowingly collect data from minors under 16.</p>
+      <p><strong>Automated decisions:</strong> We do not use automated decision‑making or profiling that significantly affects you.</p>
+      <p><strong>Complaints:</strong> You have the right to lodge a complaint with your local data protection authority.</p>
+      <p>This appendix is for additional clarity and is part of our overall privacy commitment.</p>
+    </div>
+
+  </main>
+
+  <!-- footer with address and phone -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4><i class="fas fa-paw" style="color:#b48b6b;"></i> Sidekick Co</h4>
+          <p><i class="fas fa-map-pin"></i> 1426 Pet Lane, Suite 200<br> Austin, TX 78704</p>
+          <p><i class="fas fa-phone-alt"></i> (512) 555‑PETS (7387)</p>
+          <p><i class="fas fa-envelope"></i> hello@sidekickco.com</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick links</h4>
+          <p><a href="home.html"><i class="fas fa-chevron-right"></i> Home</a></p>
+          <p><a href="privacy.html"><i class="fas fa-chevron-right"></i> Privacy</a></p>
+          <p><a href="terms.html"><i class="fas fa-chevron-right"></i> Terms</a></p>
+          <p><a href="cookies.html"><i class="fas fa-chevron-right"></i> Cookies</a></p>
+          <p><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></p>
+        </div>
+        <div class="footer-col">
+          <h4>Service hours</h4>
+          <p><i class="fas fa-clock"></i> Mon–Fri: 8am – 8pm</p>
+          <p><i class="fas fa-clock"></i> Sat: 9am – 6pm</p>
+          <p><i class="fas fa-clock"></i> Sun: closed (emergency only)</p>
+          <p style="margin-top: 12px;"><i class="fas fa-star" style="color:#b48b6b;"></i> 5‑star rated on TrustPilot</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Sidekick Co · New Pet Setup Assistance · All rights reserved.</p>
+        <p style="margin-top: 6px; font-size: 0.9rem;">📍 Austin · serving all of Central Texas</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
